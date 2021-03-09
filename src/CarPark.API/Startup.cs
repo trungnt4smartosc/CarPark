@@ -1,4 +1,5 @@
 using CarPark.Application.ApplicationUsers;
+using CarPark.Application.CarPark;
 using CarPark.Application.Mapper;
 using CarPark.Application.Ultilities;
 using CarPark.Domain.ApplicationUsers;
@@ -92,7 +93,7 @@ namespace CarPark.API
 
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
-
+            services.AddTransient<ICarParkService, CarParkService>();
             services.AddTransient<IJwtManager, JwtManager>();
         }
     }

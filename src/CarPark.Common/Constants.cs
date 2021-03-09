@@ -11,5 +11,10 @@ namespace CarPark.Common
             public const string LoginAccountSuccess = "Login successfully!";
             public const string LoginAccountFail = "Login failed!";
         }
+
+        public static class CarPark
+        {
+            public const string CarParkAvailabilityAPI = "https://api.data.gov.sg/v1/transport/carpark-availability";
+        }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace CarPark.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/users")]
     public class ApplicationUsersController : ControllerBase
     {
         private readonly IApplicationUserService _userService;
@@ -23,7 +23,7 @@ namespace CarPark.API.Controllers
         }
 
         [HttpPost]
-        [Route("/Create")]
+        [Route("Create")]
         public async Task<IActionResult> Create(ApplicationUserDto model)
         {
             var user = await _userService.Create(model);
@@ -45,7 +45,7 @@ namespace CarPark.API.Controllers
         }
 
         [HttpPost]
-        [Route("/Login")]
+        [Route("Login")]
         public async Task<IActionResult> Login(BaseApplicationUserDto model)
         {
             var user = await _userService.GetUserByLogin(model);
@@ -70,7 +70,7 @@ namespace CarPark.API.Controllers
         }
 
         [HttpGet]
-        [Route("/Details")]
+        [Route("Details")]
         [Authorize]
         public async Task<IActionResult> Details(Guid id)
         {
