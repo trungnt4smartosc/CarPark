@@ -1,6 +1,6 @@
-﻿using CarPark.API.Ultilities;
-using CarPark.API.ViewModels;
+﻿using CarPark.API.ViewModels;
 using CarPark.Application.ApplicationUsers;
+using CarPark.Application.Ultilities;
 using CarPark.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

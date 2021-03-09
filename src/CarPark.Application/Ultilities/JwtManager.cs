@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarPark.API.Ultilities
+namespace CarPark.Application.Ultilities
 {
     public interface IJwtManager
     {

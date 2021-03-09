@@ -1,7 +1,6 @@
-using AutoMapper;
-using CarPark.API.Ultilities;
 using CarPark.Application.ApplicationUsers;
 using CarPark.Application.Mapper;
+using CarPark.Application.Ultilities;
 using CarPark.Domain.ApplicationUsers;
 using CarPark.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -90,7 +89,6 @@ namespace CarPark.API
         private static void Register(IServiceCollection services)
         {
             services.AddScoped<DbContext, CarParkDbContext>();
-            //services.AddSingleton<IMapper, Mapper>();
 
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
