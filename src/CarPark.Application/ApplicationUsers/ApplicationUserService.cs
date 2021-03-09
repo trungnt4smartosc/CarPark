@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CarPark.Domain.ApplicationUsers;
+using CarPark.Common;
 
 namespace CarPark.Application.ApplicationUsers
 {
@@ -27,6 +28,9 @@ namespace CarPark.Application.ApplicationUsers
 
         public async Task<ApplicationUserDto> Create(ApplicationUserDto model)
         {
+            var existingUser = await _applicationUserRepository.Get(x => x.Email == model.Email);
+            if (existingUser != null) throw new Exception(Constants.Users.UserExisted);
+
             var data = _mapper.Map<ApplicationUser>(model);
             var result = await _applicationUserRepository.Add(data);
 

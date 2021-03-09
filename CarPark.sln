@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPark.API", "src\CarPark.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2809BDE3-5062-4D82-BEEB-0A057CA67C6E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Tests", "tests\API.Tests\API.Tests.csproj", "{DFD99DE1-5B91-41CE-84C5-6984DE0A4E77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Tests", "tests\API.Tests\Application.Tests.csproj", "{DFD99DE1-5B91-41CE-84C5-6984DE0A4E77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPark.Domain", "src\CarPark.Domain\CarPark.Domain.csproj", "{A124CA75-C344-415D-A42D-A164ED989AF7}"
 EndProject

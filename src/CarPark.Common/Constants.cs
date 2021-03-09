@@ -6,6 +6,7 @@ namespace CarPark.Common
     {
         public static class Users
         {
+            public const string UserExisted = "User already existed.";
             public const string CreateAccountSuccess = "Create account successfully!";
             public const string CreateAccountFail = "Create account failed!";
             public const string LoginAccountSuccess = "Login successfully!";
