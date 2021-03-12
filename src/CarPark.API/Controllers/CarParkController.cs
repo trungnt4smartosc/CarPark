@@ -20,7 +20,7 @@ namespace CarPark.API.Controllers
         }
 
         [HttpGet]
-        [Route("CarParkAvailability")]
+        [Route("availability")]
         public async Task<IActionResult> GetCarParkAvailability()
         {
             var result = await _carParkService.GetCarParkAvailabilities();

@@ -26,22 +26,33 @@ namespace CarPark.API.Controllers
         [Route("Create")]
         public async Task<IActionResult> Create(ApplicationUserDto model)
         {
-            var user = await _userService.Create(model);
+            try
+            {
+                var user = await _userService.Create(model);
 
-            if(user == null)
+                if (user == null)
+                {
+                    return Ok(new ResultModel
+                    {
+                        Success = false,
+                        Message = Constants.Users.CreateAccountFail
+                    });
+                }
+
+                return Ok(new ResultModel
+                {
+                    Success = true,
+                    Message = Constants.Users.CreateAccountSuccess
+                });
+            }
+            catch (Exception ex)
             {
                 return Ok(new ResultModel
                 {
                     Success = false,
-                    Message = Constants.Users.CreateAccountFail
+                    Message = ex.Message
                 });
             }
-
-            return Ok(new ResultModel
-            {
-                Success = true,
-                Message = Constants.Users.CreateAccountSuccess
-            });
         }
 
         [HttpPost]
@@ -65,7 +76,8 @@ namespace CarPark.API.Controllers
             {
                 Success = true,
                 Message = Constants.Users.LoginAccountSuccess,
-                Token = tokenString
+                Token = tokenString,
+                UserId = user.Id.ToString()
             });
         }
 
